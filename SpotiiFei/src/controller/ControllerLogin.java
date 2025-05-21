@@ -3,21 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controller;
-
-import dao.UsuarioDAO;
-import dao.Conexao;
+import DAO.UsuariosDAO;
+import DAO.Conexao;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import model.Usuario;
+import model.Usuarios;
 import view.LoginFrame;
 
 /**
  *
  * @author unifrcastanho
  */
-
 public class ControllerLogin {
     private LoginFrame view;
 
@@ -25,23 +23,21 @@ public class ControllerLogin {
         this.view = view;
     }
     
-    public void loginUsuario(){
-        Usuario user = new Usuario(null, 
-                                view.getTxt_usuario_login().getText(),
+    
+    public void loginUsuarios(){
+        Usuarios usuarios = new Usuarios(null, 
+                                view.getTxt_id_login().getText(),
                                 view.getTxt_senha_login().getText());
         Conexao conexao = new Conexao();
         try{
             Connection conn = conexao.getConnection();
-            UsuarioDAO dao = new UsuarioDAO(conn);
-            ResultSet res = dao.consultar(user);
+            UsuariosDAO dao = new UsuariosDAO(conn);
+            ResultSet res = dao.consultar(usuarios);
             if(res.next()){
                 JOptionPane.showMessageDialog(view, 
                                               "Login efetuado!", 
                                               "Aviso",
                                               JOptionPane.INFORMATION_MESSAGE);
-                Usuario aluno2 = new Usuario(res.getString("nome"), 
-                                         res.getString("usuario"), 
-                                         res.getString("senha"));
             } else{
                 JOptionPane.showMessageDialog(view, 
                                               "Login NÃO efetuado!", 

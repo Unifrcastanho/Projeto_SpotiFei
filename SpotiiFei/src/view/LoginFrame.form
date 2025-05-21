@@ -27,13 +27,13 @@
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lbl_senha_login" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                  <Component id="lbl_usuario_login" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                  <Component id="lbl_id_login" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="bt_cadastro" min="-2" pref="113" max="-2" attributes="0"/>
                   <Component id="bt_login" min="-2" pref="113" max="-2" attributes="0"/>
-                  <Component id="txt_usuario_login" min="-2" pref="201" max="-2" attributes="0"/>
+                  <Component id="txt_id_login" min="-2" pref="201" max="-2" attributes="0"/>
                   <Component id="txt_senha_login" min="-2" pref="201" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="53" max="32767" attributes="0"/>
@@ -45,8 +45,8 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl_usuario_login" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="txt_usuario_login" alignment="3" pref="31" max="32767" attributes="0"/>
+                  <Component id="lbl_id_login" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="txt_id_login" alignment="3" pref="31" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -63,15 +63,15 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbl_usuario_login">
+    <Component class="javax.swing.JLabel" name="lbl_id_login">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Usu&#xe1;rio:"/>
+        <Property name="text" type="java.lang.String" value="ID:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_usuario_login">
+    <Component class="javax.swing.JTextField" name="txt_id_login">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_senha_login">
     </Component>
