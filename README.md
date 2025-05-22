@@ -4,6 +4,10 @@ Projeto da Disciplina CCM310
 # Desenvolvedor
 Nome: Rodrigo INoue Castanho
 
+
+# Link Para o Video
+https://youtu.be/Q7Hy-qKDAOE
+
 # Objetivo do Projeto
 O projeto Spotifei visa desenvolver uma aplicação desktop com interface gráfica inspirada na plataforma Spotify, voltada para o compartilhamento de informações sobre músicas e podcasts, sem a necessidade de reprodução de áudio. O foco está em funcionalidades como cadastro de usuários, playlists e estatísticas.
 
