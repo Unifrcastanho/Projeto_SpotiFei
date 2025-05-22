@@ -58,8 +58,15 @@ A interface é construída em Java Swing, com janelas específicas para cada fun
 # Execução
 Para rodar o projeto:
 
-Configure um banco PostgreSQL local com o arquivo SQQL forncecido.
+Configure um banco PostgreSQL local com o arquivo SQQL forncecido (Spotifei_Completo.SQL).
 
 Importe o projeto no NetBeans.
 
 Compile e execute via IDE ou utilize o arquivo .jar gerado na pasta dist/.
+
+# Conclusão
+O projeto Spotifei foi desenvolvido com o foco na organização em camadas, uso efetivo do banco de dados relacional, e uma interface amigável que cobre todas as funcionalidades requeridas pelo escopo da disciplina. Ele atende tanto ao usuário comum quanto ao administrador, promovendo uma experiência completa de gerenciamento de dados musicais.
+
+# Notas
+- Esse porjeto foi um pesadelo para realizar sozinho e me arrependo de nao ter feito em dupla. O trabalho extra qre teria com as funcoes do administrador nao sao nada comparados ao que sofri fazendo este projeto.
+- Devido a alguma besteira que eu fiz acabei por perder meu projeto poucos dias antes da entrega. (Se eu tivesse feitu um backup no github....) Este projeto que esta sendo entregue esta um pouco diferente do que tinha feito originalmente devido a minha preca na horaa de finalizalo a tempo. Tenho somente a mim e minha idiotice para culpar.
