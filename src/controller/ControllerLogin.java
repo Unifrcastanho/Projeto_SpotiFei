@@ -41,7 +41,7 @@ public class ControllerLogin {
         // 2) Abre a conexão
         Connection conn = null;
         try {
-            conn = Conexao.getConexao();             // <<— use o método estático, em vez de instanciar Conexao
+            conn = Conexao.getConexao();
             UsuariosDAO dao = new UsuariosDAO(conn);
 
             // 3) Executa a consulta
