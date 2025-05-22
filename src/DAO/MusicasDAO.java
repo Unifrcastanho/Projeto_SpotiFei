@@ -21,8 +21,8 @@ public class MusicasDAO {
     }
     
     public ResultSet listarMusicasPorPlaylist(String nomePlaylist) throws SQLException {
-        String sql = "SELECT m.musictitulo FROM musicas m " +
-                     "JOIN playlists_musicas pm ON m.musictitulo = pm.musicatitulo " +
+        String sql = "SELECT musictitulo FROM musicas" +
+                     "JOIN playlists_musicas pm ON musictitulo = pm.musictitulo " +
                      "WHERE pm.playlistnome = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1, nomePlaylist);
@@ -31,7 +31,7 @@ public class MusicasDAO {
     }
 
     public boolean adicionarMusicaNaPlaylist(String tituloMusica, String nomePlaylist) throws SQLException {
-        String sql = "INSERT INTO playlists_musicas (playlistnome, musicatitulo) VALUES (?, ?)";
+        String sql = "INSERT INTO playlists_musicas (playlistnome, musictitulo) VALUES (?, ?)";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1, nomePlaylist);
         statement.setString(2, tituloMusica);
@@ -39,7 +39,7 @@ public class MusicasDAO {
     }
 
     public boolean removerMusicaDaPlaylist(String tituloMusica, String nomePlaylist) throws SQLException {
-        String sql = "DELETE FROM playlists_musicas WHERE playlistnome = ? AND musicatitulo = ?";
+        String sql = "DELETE FROM playlists_musicas WHERE playlistnome = ? AND musictitulo = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1, nomePlaylist);
         statement.setString(2, tituloMusica);
@@ -48,10 +48,8 @@ public class MusicasDAO {
     
     public ResultSet buscarPorFiltros(String titulo, String artista, String genero) throws SQLException {
     String sql = "SELECT musicid, musictitulo, musicgenero FROM musicas "
-               + "WHERE musictitulo ILIKE ? AND musicgenero ILIKE ? AND musicid IN ("
-               + "   SELECT musicid FROM musicas_artistas WHERE artistaid IN ("
-               + "       SELECT artistaid FROM artistas WHERE artistanome ILIKE ?"
-               + "   )"
+               + "WHERE musictitulo ILIKE ? AND musicgenero ILIKE ? AND artistid IN ("
+               + "   SELECT artistid FROM artistas WHERE artistnome ILIKE ?"
                + ")";
     PreparedStatement ps = conn.prepareStatement(sql);
     ps.setString(1, "%" + titulo + "%");
