@@ -54,3 +54,12 @@ O sistema utiliza PostgreSQL para garantir persistência total dos dados. Todos 
 
 # Interface Gráfica (GUI)
 A interface é construída em Java Swing, com janelas específicas para cada funcionalidade, como login, cadastro, busca de músicas, gerenciamento de playlists e painel administrativo.
+
+# Execução
+Para rodar o projeto:
+
+Configure um banco PostgreSQL local com o arquivo SQQL forncecido.
+
+Importe o projeto no NetBeans.
+
+Compile e execute via IDE ou utilize o arquivo .jar gerado na pasta dist/.
