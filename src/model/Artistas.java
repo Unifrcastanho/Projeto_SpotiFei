@@ -9,17 +9,18 @@ package model;
  * @author unifrcastanho
  */
 public class Artistas {
-    private String artistaid, artistanome;
+    private String artistanome;
+    private int artistaid;
 
     public Artistas() {
     }
 
-    public Artistas(String artistaid, String artistanome) {
+    public Artistas(int artistaid, String artistanome) {
         this.artistaid = artistaid;
         this.artistanome = artistanome;
     }
 
-    public String getArtistaid() {
+    public int getArtistaid() {
         return artistaid;
     }
 
@@ -27,7 +28,7 @@ public class Artistas {
         return artistanome;
     }
 
-    public void setArtistaid(String artistaid) {
+    public void setArtistaid(int artistaid) {
         this.artistaid = artistaid;
     }
 

@@ -14,8 +14,8 @@ import java.sql.SQLException;
 
 public class Conexao {
     public static Connection getConexao() {
-        try {
-            return DriverManager.getConnection("jdbc:mysql://localhost:UTF8/Spotifei", "postgres", "fei");
+        try {            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/Spotifei", "postgres", "fei");
+
         } catch (SQLException e) {
             throw new RuntimeException("Erro na conexão com o banco", e);
         }
